@@ -1,6 +1,6 @@
-# Portfolio Carmen
+# Paguina WEB de una fotografa
 
-Bienvenidos al proyecto de página web de la fotógrafa.
+Bienvenidos al proyecto de página web de la fotógrafa Carmen.
 
 ## Menú de inicio
 
