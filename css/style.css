@@ -42,6 +42,31 @@ color: white;
 #copyright{
     color: white;
 }
+#quienesSomos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Espacio entre imagen y texto */
+
+}
+#quienesSomosTexto{
+color: white;
+text-align: justify;
+width: 40%;
+
+
+}
+#quienesSomosTexto h2{
+  margin: 5px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+#imgPose img{
+  width: 300px; 
+  margin: 15px;
+  padding: 15px;
+}
 .namenu {
     display: flex;
     justify-content: center;
@@ -188,4 +213,50 @@ color: white;
 footer svg{
     height: 50px;
     color: white;
+}
+/* Formulario */
+#formulario {
+  width: 100%;
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+#formulario form {
+  display: flex;
+  flex-direction: column;
+}
+
+#formulario label {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+#formulario input,
+#formulario textarea {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+#formulario button {
+  margin-top: 20px;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#formulario button:hover {
+  background: #0056b3;
 }
