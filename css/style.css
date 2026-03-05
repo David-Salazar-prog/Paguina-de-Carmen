@@ -25,7 +25,7 @@ grid-area: zn;
 }
 section{
 grid-area: zs;
-background-color: black;
+background-color: #B5845A ;
 position: relative;
   display: flex;
   justify-content: center;
@@ -259,4 +259,83 @@ footer svg{
 
 #formulario button:hover {
   background: #0056b3;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 0.85;
+    transform: translateY(0);
+  }
+}
+
+/* ── Contenedor principal ── */
+#sobreMiSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  padding: 40px;
+}
+
+/* ── Enunciado (izquierda) ── */
+#enunciado {
+  width: 50%;
+  padding: 40px;
+
+  /* Animación: entra desde la izquierda */
+  animation: slideInLeft 1s ease-out both;
+  animation-delay: 0.2s;
+}
+
+#enunciado h2 {
+  color: white;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+/* ── Imagen ── */
+#imgQuienSoy {
+  position: relative;
+  width: 40%;
+  height: 700px;
+  margin: 10px;
+  background: url("../imagenes/Sobre mi/carmen.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;   /* texto pegado abajo */
+}
+
+/* ── Texto sobre la imagen ── */
+#textoSobreMi {
+  background-color: white;
+  opacity: 0;                /* empieza invisible */
+  padding: 20px 24px;
+  width: 100%;
+
+  /* Animación: aparece con fade desde abajo */
+  animation: fadeInUp 1.2s ease-out forwards;
+  animation-delay: 0.9s;    /* espera a que llegue el enunciado primero */
 }
