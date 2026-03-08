@@ -32,7 +32,26 @@ document.getElementById('btnDer').addEventListener('click', () => {
 
 document.getElementById('btnIzq').addEventListener('click', () => {
   current = (current - 1 + imgs.length) % imgs.length;
+
   updateCarrusel();
 });
 
 updateCarrusel();
+// fotos
+document.querySelectorAll('#bodas img').forEach(img => {
+  img.addEventListener('click', () => {
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.innerHTML = `
+      <span class="lightbox-close">✕</span>
+      <img src="${img.src}" alt="${img.alt}">
+    `;
+    document.body.appendChild(overlay);
+
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay || e.target.classList.contains('lightbox-close')) {
+        overlay.remove();
+      }
+    });
+  });
+});
