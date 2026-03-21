@@ -109,7 +109,16 @@ width: 40%;
 }
 
 /* Carrusel de servicios */
-
+.cajaCarrusel {
+  position: relative;
+  width: 500px;  /* más ancha para dar espacio a los botones */
+  height: 420px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
 #carrusel {
   position: relative;
   width: 300px;
@@ -190,8 +199,8 @@ width: 40%;
 #btnDer { right: 20px; }
 
 .puntos {
-  position: fixed;
-  bottom: 30px;
+  position: absolute;
+  bottom: -25px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -343,9 +352,12 @@ footer svg{
 /* fotos */
 /* ── Contenedor general ── */
 #diversasFotos {
+  margin: 10px;
   background-color: #f5f0e8;
   padding: 60px 40px;
   min-height: 100vh;
+  border: solid black 1px;
+  border-radius: 5%;
 }
 
 /* ── Sección bodas ── */
